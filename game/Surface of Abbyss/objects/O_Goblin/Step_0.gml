@@ -1,5 +1,9 @@
+// ========================================
+// System: Enemy Pursuit
+// Description: Moves toward the player while inside detection range and handles defeat cleanup.
+// Notes: Keep detection range and collision targets aligned with the dungeon room wall setup.
+// ========================================
 
-//cek player status (in here/not)
 if (instance_exists(O_Player)) {
 	var dist = distance_to_object(O_Player);
 	

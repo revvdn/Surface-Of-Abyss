@@ -1,3 +1,8 @@
+// ========================================
+// System: Shop Inventory Data
+// Description: Defines the shop item rows used by input handling and GUI rendering.
+// Notes: Item keys also map to preview sprites named sItem_<ItemKey>, so keep names synchronized.
+// ========================================
 
 shopOpen = false;
 global.shop = false;

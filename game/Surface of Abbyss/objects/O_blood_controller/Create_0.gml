@@ -1,3 +1,9 @@
+// ========================================
+// System: Combat Particle Pool
+// Description: Creates the global particle system and particle type used for hit feedback.
+// Notes: CleanUp_0 destroys both resources to avoid leaking GameMaker particle handles.
+// ========================================
+
 global.part_sys = part_system_create();
 
 global.part_blood = part_type_create();

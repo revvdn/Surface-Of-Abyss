@@ -1,5 +1,3 @@
-
-
 if (!shopOpen) exit;
 
 
@@ -47,14 +45,12 @@ var desc_sel = arr_sel[2];
 var _x_pre = (menuMargin + menuWidth) + previewWidth/2;
 var _y_pre = (guiHeight/2);
 
-// Mencari Sprite (Pastikan nama di Asset Browser adalah sItem_NamaItem)
 var spr = asset_get_index("sItem_" + item_sel);
 
 if (sprite_exists(spr)) {
     draw_sprite_ext(spr, 0, _x_pre, _y_pre - 24, 2, 2, 0, c_white, 1);
 }
 
-// Deskripsi
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
     draw_text(_x_pre, _y_pre + 80, desc_sel);

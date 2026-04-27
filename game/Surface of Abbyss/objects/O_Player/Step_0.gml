@@ -1,3 +1,9 @@
+// ========================================
+// System: Player Mode Controller
+// Description: Routes input, movement, combat, and audio based on the current global game mode.
+// Notes: Portal collisions and room creation code update global.game_mode, so this file keeps both control schemes in one event.
+// ========================================
+
 var left	= keyboard_check(ord("A")) || keyboard_check(vk_left);
 var right	= keyboard_check(ord("D")) || keyboard_check(vk_right);
 var up		= keyboard_check(ord("W")) || keyboard_check(vk_up);
@@ -27,13 +33,13 @@ if (global.game_mode == "platformer") {
 		if (y_speed > 0) y_speed = 0;
 		if (up) {
 			y_speed = -5;
-		} 
+		} 
 	}
 
 	move_and_collide(x_speed, y_speed, O_SolidApplier);
 
-	if (y > room_height || y < 0 || x > room_width || x < 0) { 
-	    room_restart();
+	if (y > room_height || y < 0 || x > room_width || x < 0) { 
+	    room_restart();
 	}
 
 	if (mouse_check_button_pressed(mb_left)) {
@@ -56,7 +62,7 @@ if (global.game_mode == "platformer") {
 			y_speed = 0;
 		}
 	}
-} 
+} 
 
 if (global.game_mode == "dungeon") {
 	
@@ -106,11 +112,11 @@ if (global.game_mode == "dungeon") {
 		}
 		if (instance_exists(target)) {
 			if (point_distance(x, y, target.x, target.y) <= range) {
-			    with (target) {
-			        hp -= 1;
-			        image_blend = c_red;
-			        alarm[1] = 5;
-			        part_particles_create(global.part_sys, x, y, global.part_blood, 8);
+			    with (target) {
+			        hp -= 1;
+			        image_blend = c_red;
+			        alarm[1] = 5;
+			        part_particles_create(global.part_sys, x, y, global.part_blood, 8);
 				}
 			}			
 		}
