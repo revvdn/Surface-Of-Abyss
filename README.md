@@ -1,6 +1,6 @@
 # Surface of Abyss
 
-A compact 2D GameMaker project maintained as a professional continuation of the original Surface of Abyss release.
+tiny 2D game made with GameMaker engine
 
 ## Overview
 
