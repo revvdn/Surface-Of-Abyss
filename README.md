@@ -56,7 +56,7 @@ The internal project folder keeps the original spelling to avoid unnecessary pro
 
 ## Credits
 
-Original development by mnhakiki16-code, continued by Revvdn.
+Original development by @mnhakiki16-code, continued by @revvdn.
 
 ## Project Status
 
